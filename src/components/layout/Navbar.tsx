@@ -1,21 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu, X, Command, Monitor, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigation } from '../../hooks/useNavigation';
 import { DURATION, EASE } from '../../constants/animation';
 
 interface NavbarProps {
-  theme: 'dark' | 'light';
   mode: 'dark' | 'light' | 'system';
   onToggleTheme: () => void;
   onOpenPalette?: () => void;
 }
 
-export default function Navbar({ theme, mode, onToggleTheme, onOpenPalette }: NavbarProps) {
+export default function Navbar({ mode, onToggleTheme, onOpenPalette }: NavbarProps) {
   const { nav } = useNavigation();
-  const location = useLocation();
-  const isHome = location.pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);

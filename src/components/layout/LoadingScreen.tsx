@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useReducedMotion } from '../../hooks/useMousePosition';
-import { DURATION, EASE } from '../../constants/animation';
+import { EASE } from '../../constants/animation';
 
 export default function LoadingScreen() {
   const [visible, setVisible] = useState(() => !sessionStorage.getItem('loaded'));

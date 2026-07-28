@@ -86,7 +86,6 @@ export default function App() {
 
       <div className="relative z-10">
         <Navbar
-          theme={theme}
           mode={mode}
           onToggleTheme={toggle}
           onOpenPalette={() => setPaletteOpen(true)}
