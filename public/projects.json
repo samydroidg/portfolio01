@@ -1,0 +1,235 @@
+[
+  {
+    "id": "flysta",
+    "slug": "flysta",
+    "name": "Flysta",
+    "category": "Enterprise SaaS",
+    "industry": "Transportation & Logistics",
+    "status": "In Development",
+    "coverImage": "",
+    "accentColor": "#6366f1",
+    "overview": "Flysta is a modern Transportation Management System designed to simplify logistics operations and help transport businesses manage their workflow through a single scalable platform.",
+    "mission": "Digitize logistics workflows while providing a fast, intuitive, and maintainable enterprise experience.",
+    "problem": "Transport businesses rely on manual paperwork, disconnected tools, and fragmented workflows to manage logistics operations. This leads to operational inefficiencies, data loss, and poor visibility into the supply chain.",
+    "solution": "Flysta provides a unified dashboard for managing the entire logistics lifecycle — from LR creation to POD delivery — with role-based access, real-time tracking, and comprehensive reporting.",
+    "features": [
+      "Dashboard with key logistics metrics",
+      "LR (Lorry Receipt) management",
+      "Manifest management and generation",
+      "Real-time delivery tracking",
+      "POD (Proof of Delivery) management",
+      "Company and branch management",
+      "Role-based access control",
+      "Authentication and authorization",
+      "Comprehensive reports and analytics"
+    ],
+    "techStack": [
+      { "name": "React", "category": "frontend" },
+      { "name": "TypeScript", "category": "frontend" },
+      { "name": "Tailwind CSS", "category": "frontend" },
+      { "name": "Node.js", "category": "backend" },
+      { "name": "Express.js", "category": "backend" },
+      { "name": "PostgreSQL", "category": "database" },
+      { "name": "JWT", "category": "security" }
+    ],
+    "architecture": "Scalable enterprise architecture with modular React frontend, RESTful API backend, and relational database design optimized for logistics workflows.",
+    "challenges": [
+      "Designing a data model that accommodates complex logistics relationships",
+      "Building a responsive dashboard with real-time data updates",
+      "Implementing role-based access across multiple organizational levels"
+    ],
+    "engineeringDecisions": [
+      "Chose PostgreSQL for relational integrity across logistics entities",
+      "Modular component architecture for enterprise scalability",
+      "JWT-based authentication for secure multi-tenant access"
+    ],
+    "lessonsLearned": [
+      "Enterprise software requires deep domain understanding",
+      "Data modeling is critical for logistics applications",
+      "Role-based access must be designed from the start"
+    ],
+    "roadmap": [
+      { "title": "Real-time GPS tracking", "status": "planned" },
+      { "title": "Mobile app for drivers", "status": "planned" },
+      { "title": "Automated billing and invoicing", "status": "planned" },
+      { "title": "Integration with third-party logistics APIs", "status": "future" }
+    ],
+    "gallery": [],
+    "github": "",
+    "liveDemo": ""
+  },
+  {
+    "id": "forgeo",
+    "slug": "forgeo",
+    "name": "Forgeo",
+    "category": "Developer Growth Platform",
+    "industry": "Education Technology",
+    "status": "In Development",
+    "coverImage": "",
+    "accentColor": "#8b5cf6",
+    "overview": "Forgeo is a developer growth platform that helps programmers become real software engineers. Instead of teaching through tutorials, it teaches through real-world missions and engineering thinking.",
+    "mission": "Help developers think like engineers instead of simply following tutorials.",
+    "problem": "Most programming education focuses on syntax and tutorials rather than engineering thinking. Developers struggle to transition from writing code to building systems.",
+    "solution": "Forgeo provides mission-based learning paths that simulate real engineering challenges. Developers learn by solving problems, designing solutions, and reflecting on their approach.",
+    "features": [
+      "Mission-based learning paths",
+      "Interactive coding challenges",
+      "Engineering mindset assessments",
+      "Progress tracking dashboard",
+      "Learning journey visualization",
+      "Community discussions",
+      "Project-based assessments",
+      "Skill gap analysis"
+    ],
+    "techStack": [
+      { "name": "React", "category": "frontend" },
+      { "name": "TypeScript", "category": "frontend" },
+      { "name": "Tailwind CSS", "category": "frontend" },
+      { "name": "Node.js", "category": "backend" },
+      { "name": "PostgreSQL", "category": "database" }
+    ],
+    "architecture": "Modern full-stack architecture with a focus on interactive learning experiences and personalized learning paths.",
+    "challenges": [
+      "Designing missions that accurately simulate real engineering problems",
+      "Creating objective assessments for engineering thinking",
+      "Building a recommendation system for personalized learning paths"
+    ],
+    "engineeringDecisions": [
+      "Mission-based architecture over traditional course structure",
+      "Focus on problem-solving over content consumption",
+      "Progressive difficulty scaling aligned with real-world complexity"
+    ],
+    "lessonsLearned": [
+      "Teaching engineering thinking requires a different approach than teaching syntax",
+      "Interactive challenges drive deeper learning than passive content",
+      "Feedback loops are essential for skill development"
+    ],
+    "roadmap": [
+      { "title": "AI-powered learning recommendations", "status": "planned" },
+      { "title": "Peer review system", "status": "planned" },
+      { "title": "Company partnerships for hiring", "status": "future" },
+      { "title": "Mobile learning experience", "status": "future" }
+    ],
+    "gallery": [],
+    "github": "",
+    "liveDemo": ""
+  },
+  {
+    "id": "nutrilab",
+    "slug": "nutrilab",
+    "name": "NutriLab",
+    "category": "Healthcare SaaS",
+    "industry": "Healthcare",
+    "status": "In Development",
+    "coverImage": "",
+    "accentColor": "#06b6d4",
+    "overview": "NutriLab is a comprehensive healthcare SaaS platform designed for nutritionists and dietitians to manage their clinics digitally.",
+    "mission": "Replace manual clinic operations with a secure, scalable, production-ready digital platform.",
+    "problem": "Nutritionists and dietitians manage patient records, appointments, meal plans, and prescriptions manually or through disconnected tools. This creates inefficiencies, data inconsistency, and poor patient experience.",
+    "solution": "NutriLab provides a complete clinic management platform with patient registration, appointment scheduling, nutrition assessment tools, meal planning, PDF prescriptions, QR verification, and multi-role access.",
+    "features": [
+      "Patient registration and profile management",
+      "Appointment scheduling and calendar",
+      "Nutrition assessment and analysis",
+      "Meal planning and blueprint generation",
+      "Progress tracking and history",
+      "PDF prescription generation",
+      "QR code verification",
+      "Email and WhatsApp communication",
+      "Role-based access (Owner, Admin, Nutritionist, Receptionist, Finance, Patient)",
+      "Reports and analytics"
+    ],
+    "techStack": [
+      { "name": "React", "category": "frontend" },
+      { "name": "TypeScript", "category": "frontend" },
+      { "name": "Tailwind CSS", "category": "frontend" },
+      { "name": "Node.js", "category": "backend" },
+      { "name": "Express.js", "category": "backend" },
+      { "name": "PostgreSQL", "category": "database" },
+      { "name": "JWT", "category": "security" }
+    ],
+    "architecture": "Multi-tenant SaaS architecture with role-based access, secure patient data handling, and modular feature design for healthcare compliance.",
+    "challenges": [
+      "Designing a data model that handles complex healthcare relationships",
+      "Implementing secure multi-tenant access with fine-grained permissions",
+      "Building PDF generation with dynamic content and professional formatting"
+    ],
+    "engineeringDecisions": [
+      "Multi-tenant architecture for scalability across clinics",
+      "Role-based access designed from day one",
+      "QR verification for prescription authenticity",
+      "Modular feature design for future extensibility"
+    ],
+    "lessonsLearned": [
+      "Healthcare software demands rigorous data security",
+      "Multi-role systems require careful permission design",
+      "PDF generation requires significant engineering effort for quality output"
+    ],
+    "roadmap": [
+      { "title": "Teleconsultation integration", "status": "planned" },
+      { "title": "AI-powered meal recommendations", "status": "planned" },
+      { "title": "Inventory management for supplements", "status": "future" },
+      { "title": "Mobile app for patients", "status": "future" }
+    ],
+    "gallery": [],
+    "github": "",
+    "liveDemo": ""
+  },
+  {
+    "id": "fitflow",
+    "slug": "fitflow",
+    "name": "FitFlow",
+    "category": "Desktop Software",
+    "industry": "Fitness",
+    "status": "In Development",
+    "coverImage": "",
+    "accentColor": "#10b981",
+    "overview": "FitFlow is a modern desktop Gym Management Software developed by QUIXELON. It provides gym owners with a fast, reliable, and easy-to-use desktop application for managing daily operations.",
+    "mission": "Provide gym owners with a fast, reliable, and easy-to-use desktop application for managing daily operations.",
+    "problem": "Gym owners struggle with managing memberships, attendance, billing, and trainer schedules using manual processes or expensive cloud-based solutions that require constant internet connectivity.",
+    "solution": "FitFlow is a desktop application built with Electron that works reliably offline, provides complete gym management capabilities, and offers future cloud synchronization.",
+    "features": [
+      "Member management and profiles",
+      "Membership plans and billing",
+      "Attendance tracking",
+      "Payment processing",
+      "Trainer management and scheduling",
+      "Reports and analytics",
+      "Offline-first architecture",
+      "Future cloud synchronization"
+    ],
+    "techStack": [
+      { "name": "Electron", "category": "desktop" },
+      { "name": "React", "category": "frontend" },
+      { "name": "TypeScript", "category": "frontend" },
+      { "name": "Prisma", "category": "database" },
+      { "name": "SQLite", "category": "database" }
+    ],
+    "architecture": "Enterprise desktop architecture with offline-first design, local SQLite database via Prisma, and Electron shell for cross-platform compatibility.",
+    "challenges": [
+      "Designing an offline-first architecture that syncs seamlessly",
+      "Building a desktop UI that feels native and responsive",
+      "Managing local database migrations across distributed installations"
+    ],
+    "engineeringDecisions": [
+      "Electron for cross-platform desktop delivery",
+      "SQLite + Prisma for reliable local data storage",
+      "Offline-first design for gyms with unreliable internet",
+      "Future cloud sync designed as an optional layer"
+    ],
+    "lessonsLearned": [
+      "Desktop applications require different UX patterns than web apps",
+      "Offline-first design adds complexity but provides reliability",
+      "Electron + Prisma + SQLite is a powerful stack for desktop apps"
+    ],
+    "roadmap": [
+      { "title": "Cloud synchronization", "status": "planned" },
+      { "title": "Member mobile app", "status": "planned" },
+      { "title": "Payment gateway integration", "status": "planned" },
+      { "title": "Multi-branch support", "status": "future" }
+    ],
+    "gallery": [],
+    "github": "",
+    "liveDemo": ""
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "year": "2021",
+    "title": "Began Programming",
+    "description": "Started learning programming fundamentals. Built small projects to understand how software works at a foundational level.",
+    "type": "milestone"
+  },
+  {
+    "year": "2022",
+    "title": "Web Development Foundations",
+    "description": "Learned HTML, CSS, and JavaScript by building interactive web pages. Discovered the joy of creating something visible in a browser.",
+    "type": "milestone"
+  },
+  {
+    "year": "2023",
+    "title": "React & Modern Frontend",
+    "description": "Adopted React and modern frontend tooling. Built component-based applications and learned state management, routing, and design systems.",
+    "type": "milestone"
+  },
+  {
+    "year": "2024",
+    "title": "Full-Stack Development",
+    "description": "Built complete applications with Node.js, Express, and PostgreSQL. Learned how data flows end-to-end and how to design APIs and database schemas.",
+    "type": "milestone"
+  },
+  {
+    "year": "2025",
+    "title": "Building Production Products",
+    "description": "Started developing production-ready SaaS applications including a Transportation Management System, Healthcare platform, and developer education tool.",
+    "type": "milestone"
+  },
+  {
+    "year": "2026",
+    "title": "Deepening Engineering Expertise",
+    "description": "Focusing on system design, backend architecture, and AI integration. Building products that solve real business problems at scale.",
+    "type": "milestone"
+  }
+]

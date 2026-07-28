@@ -1,0 +1,17 @@
+{
+  "personal": {
+    "name": "Gourav Ojha",
+    "initials": "GO",
+    "greeting": "Hi, I'm",
+    "titles": ["Product Engineer", "Software Engineer", "Full Stack Developer"],
+    "bio": "I build scalable digital products with modern technologies, combining engineering discipline with thoughtful design to create software that genuinely solves problems.",
+    "mission": "My mission is to build software that makes a real difference — products that improve workflows, reduce manual effort, and provide lasting value for businesses and users.",
+    "aboutIntro": "I'm a Computer Science student and Product Engineer who builds complete software products rather than isolated features. I focus on understanding the problem deeply before reaching for a solution.",
+    "aboutDetail": "I believe engineering is about thinking, designing, experimenting, and continuously improving. Every project I build teaches me something new about architecture, user experience, or the domain itself.",
+    "philosophy": "AI is transforming how we build software, but it doesn't replace engineering judgment. I use AI to accelerate development while staying focused on system design, code quality, and long-term maintainability.",
+    "location": "India",
+    "email": "",
+    "resumeUrl": "/resume.pdf",
+    "availability": "Available for projects"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "site": {
+    "name": "Gourav Ojha — Product Engineer",
+    "tagline": "Building software that solves real-world problems",
+    "url": "https://gourav.dev",
+    "defaultTheme": "system",
+    "version": "2.0.0",
+    "buildDate": "2026-07-28"
+  },
+  "seo": {
+    "title": "Gourav Ojha | Product Engineer — Building Software That Solves Real Problems",
+    "description": "Gourav Ojha is a Product Engineer who builds scalable digital products. Specializing in full-stack development, SaaS architecture, and thoughtful engineering.",
+    "keywords": "product engineer, full-stack developer, react, typescript, node.js, portfolio, saas, software engineer",
+    "author": "Gourav Ojha",
+    "ogImage": "/og-image.png"
+  },
+  "analytics": {
+    "provider": "",
+    "id": ""
+  }
+}

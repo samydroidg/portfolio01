@@ -1,0 +1,6 @@
+[
+  { "label": "Projects Built", "value": 4, "suffix": "", "description": "Production applications from concept to deployment" },
+  { "label": "Technologies", "value": 20, "suffix": "+", "description": "Languages, frameworks, and tools I work with" },
+  { "label": "GitHub Repositories", "value": 20, "suffix": "+", "description": "Public and private repositories" },
+  { "label": "Hours Building", "value": 800, "suffix": "+", "description": "Dedicated to learning and building" }
+]
