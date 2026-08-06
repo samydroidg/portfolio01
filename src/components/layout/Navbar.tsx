@@ -42,7 +42,7 @@ export default function Navbar({ mode, onToggleTheme, onOpenPalette }: NavbarPro
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all ${
           hidden ? '-translate-y-full' : 'translate-y-0'
-        } ${scrolled ? 'glass-strong shadow-soft' : ''}`}
+        } ${scrolled ? 'navbar-scrolled glass-strong shadow-soft' : ''}`}
         style={{ transitionDuration: '0.3s', transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
       >
         <nav className="section-container">

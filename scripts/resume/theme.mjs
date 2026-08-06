@@ -1,0 +1,35 @@
+export const theme = {
+  palette: {
+    ink: '#0A0A0B',
+    text: '#3F3F46',
+    muted: '#71717A',
+    accent: '#6366F1',
+    hairline: '#E4E4E7',
+  },
+  fonts: {
+    bold: 'Helvetica-Bold',
+    regular: 'Helvetica',
+    oblique: 'Helvetica-Oblique',
+  },
+  type: {
+    name: 25,
+    headline: 11.5,
+    contact: 9,
+    stats: 9,
+    sectionTitle: 10,
+    body: 9.5,
+    projectName: 10.5,
+    projectBody: 9.5,
+    stack: 8.5,
+    bullet: 9.5,
+    competency: 9.5,
+    footer: 8,
+  },
+  spacing: {
+    sectionBefore: 13,
+    sectionAfter: 6,
+    projectGap: 9,
+    bulletGap: 3,
+    paragraphGap: 4,
+  },
+};

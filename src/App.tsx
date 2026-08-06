@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
 import { useTheme } from './hooks/useTheme';
 import { useReducedMotion } from './hooks/useMousePosition';
+import { setLenis } from './lib/lenis';
 
 import Navbar from './components/layout/Navbar';
 import Background from './components/layout/Background';
@@ -38,12 +39,16 @@ export default function App() {
       easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: !reduced,
     });
+    setLenis(lenis);
     const raf = (time: number) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
-    return () => lenis.destroy();
+    return () => {
+      lenis.destroy();
+      setLenis(null);
+    };
   }, [reduced]);
 
   useEffect(() => {

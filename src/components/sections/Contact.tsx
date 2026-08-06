@@ -7,6 +7,7 @@ import Reveal from '../ui/Reveal';
 import { usePortfolio } from '../../hooks/usePortfolio';
 import { useSocials } from '../../hooks/useSocials';
 import { DURATION, EASE } from '../../constants/animation';
+import { submitContactMessage } from '../../utils/contact';
 
 export default function Contact() {
   const { data } = usePortfolio();
@@ -14,8 +15,10 @@ export default function Contact() {
   const person = data?.personal;
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [honey, setHoney] = useState('');
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -31,10 +34,22 @@ export default function Contact() {
     e.preventDefault();
     if (!validate()) return;
     setSending(true);
-    await new Promise(r => setTimeout(r, 1200));
+    setError(null);
+    const result = await submitContactMessage({
+      name: form.name,
+      email: form.email,
+      message: form.message,
+      honey,
+    });
+    if (!result.ok) {
+      setError(result.error ?? 'Message could not be sent. Please try again.');
+      setSending(false);
+      return;
+    }
     setSending(false);
     setSent(true);
     setForm({ name: '', email: '', message: '' });
+    setHoney('');
     setTimeout(() => setSent(false), 5000);
   };
 
@@ -108,6 +123,16 @@ export default function Contact() {
                     className="space-y-5"
                     noValidate
                   >
+                    <input
+                      type="text"
+                      name="_honey"
+                      value={honey}
+                      onChange={e => setHoney(e.target.value)}
+                      className="hidden"
+                      aria-hidden="true"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div className="relative">
                         <input
@@ -155,6 +180,16 @@ export default function Contact() {
                       <label htmlFor="contact-message" className="absolute left-4 top-4 text-sm text-text-muted transition-all pointer-events-none peer-focus:text-xs peer-focus:top-2 peer-focus:text-accent peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:top-2" style={{ transitionDuration: `${DURATION.hover}s` }}>Message</label>
                       {errors.message && <motion.p id="contact-message-error" initial={{ opacity: 0, y: -4 }} animate={{ opacity: 1, y: 0 }} className="text-xs text-red-500 mt-1.5" role="alert">{errors.message}</motion.p>}
                     </div>
+                    {error && (
+                      <motion.p
+                        initial={{ opacity: 0, y: -4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-xs text-red-500"
+                        role="alert"
+                      >
+                        {error}
+                      </motion.p>
+                    )}
                     <button
                       type="submit"
                       disabled={sending}

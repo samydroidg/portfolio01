@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -6,11 +7,39 @@ import Badge from '../components/ui/Badge';
 import Button from '../components/ui/Button';
 import ErrorState from '../components/layout/ErrorState';
 import { DURATION, EASE } from '../constants/animation';
+import { getLenis } from '../lib/lenis';
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
   const { projects, loading, error, retry } = useProjects();
   const project = projects.find(p => p.slug === slug);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const lenis = getLenis();
+    const root = document.documentElement;
+    const body = document.body;
+
+    lenis?.scrollTo(0, { immediate: true, force: true });
+    lenis?.stop();
+
+    const prevBodyOverflow = body.style.overflow;
+    const prevRootOverflow = root.style.overflow;
+    const prevBodyOverscroll = body.style.overscrollBehavior;
+
+    body.style.overflow = 'hidden';
+    root.style.overflow = 'hidden';
+    body.style.overscrollBehavior = 'none';
+
+    scrollRef.current?.scrollTo(0, 0);
+
+    return () => {
+      body.style.overflow = prevBodyOverflow;
+      root.style.overflow = prevRootOverflow;
+      body.style.overscrollBehavior = prevBodyOverscroll;
+      lenis?.start();
+    };
+  }, []);
 
   if (loading) {
     return (
@@ -43,7 +72,11 @@ export default function ProjectDetail() {
   }, {});
 
   return (
-    <div className="min-h-screen pt-24">
+    <div
+      ref={scrollRef}
+      className="fixed inset-0 z-0 overflow-y-auto overscroll-contain pt-24"
+      style={{ touchAction: 'pan-y' }}
+    >
       <div className="section-container max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 12 }}

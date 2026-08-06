@@ -45,7 +45,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-text-muted) transparent;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
 body {
@@ -65,8 +65,19 @@ body {
 }
 
 /* ─── Scrollbar ─── */
+:root {
+  --scrollbar-thumb: rgba(9, 9, 11, 0.3);
+  --scrollbar-thumb-hover: rgba(9, 9, 11, 0.55);
+}
+
+.dark {
+  --scrollbar-thumb: rgba(255, 255, 255, 0.22);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.4);
+}
+
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -74,13 +85,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-text-muted);
-  border-radius: 3px;
-  transition: background-color 0.2s ease, width 0.2s ease;
+  background-color: var(--scrollbar-thumb);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+  transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-secondary);
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 /* ─── Focus ─── */
@@ -142,6 +159,11 @@ body {
 .light .glass-strong {
   background: rgba(255, 255, 255, 0.7);
   border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Navbar scrolled state (no visible separator border) ─── */
+.navbar-scrolled {
+  border: none;
 }
 
 /* ─── Shadows ─── */

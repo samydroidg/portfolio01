@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Home, User, Code2, Briefcase, Mail, Command, BookOpen } from 'lucide-react';
 import { DURATION, EASE } from '../../constants/animation';
+import { getLenis } from '../../lib/lenis';
 
 interface Command {
   id: string;
@@ -46,6 +47,25 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
     }
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const lenis = getLenis();
+    const root = document.documentElement;
+    const body = document.body;
+    const prevRootOverflow = root.style.overflow;
+    const prevBodyOverflow = body.style.overflow;
+
+    lenis?.stop();
+    root.style.overflow = 'hidden';
+    body.style.overflow = 'hidden';
+
+    return () => {
+      root.style.overflow = prevRootOverflow;
+      body.style.overflow = prevBodyOverflow;
+      lenis?.start();
+    };
+  }, [open]);
+
   const handleKey = useCallback((e: React.KeyboardEvent) => {
     if (e.key === 'ArrowDown') { e.preventDefault(); setSelected(i => Math.min(i + 1, filtered.length - 1)); }
     if (e.key === 'ArrowUp') { e.preventDefault(); setSelected(i => Math.max(i - 1, 0)); }
@@ -85,7 +105,7 @@ export default function CommandPalette({ open, onClose }: CommandPaletteProps) {
               />
               <kbd className="text-xs text-text-muted bg-accent-soft px-1.5 py-0.5 rounded">ESC</kbd>
             </div>
-            <div className="p-2 max-h-60 overflow-y-auto">
+            <div data-lenis-prevent className="p-2 max-h-60 overflow-y-auto overscroll-contain">
               {filtered.map((cmd, i) => (
                 <button
                   key={cmd.id}

@@ -1,0 +1,43 @@
+{
+  "headline": "Product Engineer • Full Stack Developer",
+  "summary": "Product Engineer and Computer Science student passionate about building scalable software products that solve real-world problems. I enjoy designing modern full-stack applications with a strong focus on clean architecture, maintainability, performance, and user experience. My work spans enterprise SaaS platforms, healthcare systems, desktop software, and developer tools.",
+  "contact": {
+    "location": "India",
+    "email": "gouravojha.2005@gmail.com",
+    "github": "github.com/samydroidg",
+    "linkedin": "linkedin.com/in/gouravojha01",
+    "website": "forgeo.in"
+  },
+  "stats": true,
+  "education": [
+    {
+      "degree": "Bachelor of Technology (Computer Science)",
+      "school": "Sri Aurobindo Institute of Technology, Indore",
+      "period": ""
+    }
+  ],
+  "competencies": [
+    "Product Engineering",
+    "Full Stack Development",
+    "SaaS Architecture",
+    "REST API Development",
+    "Authentication & Authorization",
+    "Responsive UI Development",
+    "Database Design",
+    "Performance Optimization",
+    "Clean Architecture"
+  ],
+  "availability": [
+    "Open for Internships",
+    "Open for Freelance",
+    "Open for Full-Time Opportunities"
+  ],
+  "skillSections": [
+    { "title": "Frontend", "categories": ["frontend"] },
+    { "title": "Backend", "categories": ["backend"] },
+    { "title": "Database", "categories": ["database"] },
+    { "title": "Tools", "categories": ["tools"] },
+    { "title": "Languages", "categories": ["languages"] }
+  ],
+  "projects": "all"
+}

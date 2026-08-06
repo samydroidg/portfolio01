@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "resume": "node scripts/resume.mjs",
+    "resume:premium": "node scripts/resume.mjs --style=premium"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

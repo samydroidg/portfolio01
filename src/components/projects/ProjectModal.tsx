@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import { useReducedMotion } from '../../hooks/useMousePosition';
 import { DURATION, EASE } from '../../constants/animation';
+import { getLenis } from '../../lib/lenis';
 import type { ProjectData } from '../../types/projects';
 
 interface ProjectModalProps {
@@ -15,6 +16,30 @@ interface ProjectModalProps {
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const reduced = useReducedMotion();
   const [galleryIndex, setGalleryIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const lenis = getLenis();
+    const root = document.documentElement;
+    const body = document.body;
+    const previousActive = document.activeElement as HTMLElement | null;
+
+    lenis?.stop();
+
+    const prevRootOverflow = root.style.overflow;
+    const prevBodyOverflow = body.style.overflow;
+    root.style.overflow = 'hidden';
+    body.style.overflow = 'hidden';
+
+    scrollRef.current?.focus({ preventScroll: true });
+
+    return () => {
+      root.style.overflow = prevRootOverflow;
+      body.style.overflow = prevBodyOverflow;
+      lenis?.start();
+      previousActive?.focus?.({ preventScroll: true });
+    };
+  }, []);
 
   const techByCategory = project.techStack.reduce<Record<string, { name: string; category: string }[]>>((acc, t) => {
     if (!acc[t.category]) acc[t.category] = [];
@@ -36,7 +61,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     >
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
       <motion.div
-        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto glass-strong shadow-elevated rounded-xl"
+        ref={scrollRef}
+        data-lenis-prevent
+        tabIndex={-1}
+        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto overscroll-contain glass-strong shadow-elevated rounded-xl outline-none"
+        style={{ WebkitOverflowScrolling: 'touch' }}
         initial={reduced ? { opacity: 0 } : { opacity: 0, scale: 0.95, y: 8 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={reduced ? { opacity: 0 } : { opacity: 0, scale: 0.95, y: 8 }}

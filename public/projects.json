@@ -184,7 +184,7 @@
     "status": "In Development",
     "coverImage": "",
     "accentColor": "#10b981",
-    "overview": "FitFlow is a modern desktop Gym Management Software developed by QUIXELON. It provides gym owners with a fast, reliable, and easy-to-use desktop application for managing daily operations.",
+    "overview": "FitFlow is a modern desktop Gym Management Software developed by Forgeo. It provides gym owners with a fast, reliable, and easy-to-use desktop application for managing daily operations.",
     "mission": "Provide gym owners with a fast, reliable, and easy-to-use desktop application for managing daily operations.",
     "problem": "Gym owners struggle with managing memberships, attendance, billing, and trainer schedules using manual processes or expensive cloud-based solutions that require constant internet connectivity.",
     "solution": "FitFlow is a desktop application built with Electron that works reliably offline, provides complete gym management capabilities, and offers future cloud synchronization.",
